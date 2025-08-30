@@ -271,7 +271,7 @@
     </div>
   </section>
 
-  <!-- Contact -->
+ <!-- Contact -->
 <section class="contact" id="contact">
   <div class="container">
     <h2 class="title">معلومات <span style="background:linear-gradient(90deg,var(--primary),var(--secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent">التواصل</span></h2>
@@ -308,35 +308,37 @@
   const formMessage = document.getElementById('formMessage');
 
   form.addEventListener('submit', function(e) {
-    e.preventDefault(); // يمنع إعادة تحميل الصفحة
+    e.preventDefault();
     const formData = new FormData(form);
 
     fetch(form.action, {
-      method: form.method,
+      method: "POST",
       body: formData,
-      headers: { 'Accept': 'application/json' }
+      headers: { "Accept": "application/json" }
     })
     .then(response => {
       if (response.ok) {
-        formMessage.style.display = 'block';
+        formMessage.style.display = "block";
+        formMessage.style.color = "green";
+        formMessage.textContent = "تم إرسال رسالتك بنجاح ✅";
         form.reset();
+        setTimeout(() => { formMessage.style.display = "none"; }, 5000);
       } else {
         response.json().then(data => {
-          if (data.errors) {
-            formMessage.style.display = 'block';
-            formMessage.style.color = 'red';
-            formMessage.textContent = 'حدث خطأ، يرجى المحاولة مرة أخرى.';
-          }
-        })
+          formMessage.style.display = "block";
+          formMessage.style.color = "red";
+          formMessage.textContent = data?.errors ? data.errors.map(err => err.message).join(", ") : "حدث خطأ، حاول مرة أخرى";
+        });
       }
     })
     .catch(error => {
-      formMessage.style.display = 'block';
-      formMessage.style.color = 'red';
-      formMessage.textContent = 'حدث خطأ، يرجى المحاولة مرة أخرى.';
+      formMessage.style.display = "block";
+      formMessage.style.color = "red";
+      formMessage.textContent = "حدث خطأ، حاول مرة أخرى";
     });
   });
 </script>
+
 
   <!-- Footer -->
   <footer>
@@ -663,3 +665,4 @@
 </body>
 
 </html>
+
