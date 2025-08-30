@@ -271,20 +271,32 @@
     </div>
   </section>
 
- <!-- Contact -->
+  
+<!-- Contact -->
 <section class="contact" id="contact">
   <div class="container">
     <h2 class="title">معلومات <span style="background:linear-gradient(90deg,var(--primary),var(--secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent">التواصل</span></h2>
-    <div class="row">
-  <i class="fas fa-phone"></i>
-  <span id="cPhone">01020990234</span>
-</div>
-<div class="row" style="margin-top:5px;">
-  <a href="https://wa.me/201020990234" target="_blank" style="color:#25D366; font-size:20px; text-decoration:none;">
-    <i class="fab fa-whatsapp"></i> تواصل عبر واتساب
-  </a>
-</div>
-
+    <div class="wrap">
+      <div class="info" data-aos="fade-right">
+        <h3>ابقَ على تواصل</h3>
+        <div class="row"><i class="fas fa-phone"></i><span id="cPhone">01020990234</span></div>
+        <div class="row" style="margin-top:5px;">
+          <a href="https://wa.me/201020990234" target="_blank" style="color:#25D366; font-size:18px; text-decoration:none;">
+            <i class="fab fa-whatsapp"></i> تواصل عبر واتساب
+          </a>
+        </div>
+        <div class="row"><i class="fas fa-envelope"></i><span id="cEmail">moelsharkawy03@gmail.com</span></div>
+        <div class="row"><i class="fas fa-map-marker-alt"></i><span id="cAddress">البحيرة ، مصر</span></div>
+      </div>
+      <form data-aos="fade-left" onsubmit="event.preventDefault(); alert('تم إرسال رسالتك بنجاح ✅'); this.reset();">
+        <div class="field"><input type="text" placeholder="اسمك" required></div>
+        <div class="field"><input type="email" placeholder="بريدك الإلكتروني" required></div>
+        <div class="field"><textarea rows="5" placeholder="رسالتك" required></textarea></div>
+        <button class="btn btn-primary" type="submit">إرسال الرسالة</button>
+      </form>
+    </div>
+  </div>
+</section>
 
 
       <!-- Formspree Contact Form -->
@@ -706,6 +718,7 @@
 </body>
 
 </html>
+
 
 
 
