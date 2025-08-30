@@ -339,23 +339,24 @@
   });
 </script>
 
- <!-- Footer -->
+  
+<!-- Footer -->
 <footer>
   <div class="container">
     <h3 id="fName">محمد الشرقاوى</h3>
     <p id="fTitle">مصمم جرافيك ومسوق إلكتروني</p>
     <div class="social">
-      <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="https://twitter.com/" target="_blank" aria-label="Twitter/X" class="twitter"><i class="fa-brands fa-twitter"></i></a>
-      <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" class="instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook" class="facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/" target="_blank" aria-label="Twitter/X" class="twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" class="instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
     </div>
     <p>جميع الحقوق محفوظة © <span id="year"></span></p>
   </div>
 </footer>
 
-<!-- تحميل Font Awesome من CDN -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- تحميل Font Awesome من CDN الرسمي -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
   footer {
@@ -377,20 +378,19 @@
     transition: all 0.3s ease;
   }
 
-  .social a.facebook:hover { background: #1877f2; color: #fff; transform: translateY(-5px);}
-  .social a.twitter:hover { background: #1da1f2; color: #fff; transform: translateY(-5px);}
-  .social a.instagram:hover { background: #c32aa3; color: #fff; transform: translateY(-5px);}
-  .social a.linkedin:hover { background: #0a66c2; color: #fff; transform: translateY(-5px);}
+  .social a.facebook:hover { background: #1877f2; transform: translateY(-5px);}
+  .social a.twitter:hover { background: #1da1f2; transform: translateY(-5px);}
+  .social a.instagram:hover { background: #c32aa3; transform: translateY(-5px);}
+  .social a.linkedin:hover { background: #0a66c2; transform: translateY(-5px);}
 
-  footer #year {
-    font-weight: bold;
-  }
+  footer #year { font-weight: bold; }
 </style>
 
 <script>
   // تحديث السنة تلقائي
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
 
 
   <!-- Floating elements -->
@@ -703,6 +703,7 @@
 </body>
 
 </html>
+
 
 
 
